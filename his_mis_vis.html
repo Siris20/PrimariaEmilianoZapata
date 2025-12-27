@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia,Mision,Vision</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./E_todos.css">
+  <link rel="stylesheet" href="./E_his_mis_vis.css">
+   
+</head>
+<body>
+<!-- NavBar -->
+<div id="navbar-placeholder"></div>
+
+<!-- Titulo -->
+<header>
+<div class="titulo">
+      <h1>PILARES DE NUESTRA ESCUELA</h1>
+    </div>
+
+    <div class="contenedor-imagen">
+      <!-- Reemplaza el src con tu imagen real (puedes subirla a tu servidor o usar la misma URL) -->
+      <img src="./assets/hmv.webp" alt="Pilares de nuestra escuela" class="imagen-header">
+    </div>
+  </header>
+<!-- Historia -->
+<section class="seccion-historia">
+    <div class="texto">
+      <h2>NUESTRA HISTORIA</h2>
+      <p>
+        Fundada en la década de 1950 como parte de la expansión educativa rural 
+        en Jalisco, la Escuela Primaria Emiliano Zapata surgió para honrar al 
+        héroe de la Revolución Mexicana y brindar acceso a la educación básica 
+        en la comunidad de Yahualica de González Gallo.
+      </p>
+    </div>
+
+    <div class="imagen">
+      <img src="./assets/Historia.webp" alt="Nuestra historia">
+    </div>
+  </section>
+
+<!-- Mision-Vision -->
+<section class="seccion-mision-vision">
+  <div class="contenedor-tres-columnas">
+    
+    <div class="columna texto-izq">
+      <h2>Misión</h2>
+      <p>
+       Somos una escuela primaria que garantiza a todos los niños y las niñas, el desarrollo de competencias básicas para la vida, la práctica de valores, el disfrute de las artes, el ejercicio físico, el deporte, lo establecido en el plan y programas de estudio vigentes y los demás
+        preceptos establecidos en el artículo 3° constitucional y la ley general de educación.
+      </p>
+      <span class="linea-decorativa"></span>
+    </div>
+
+    <div class="columna imagen-centro">
+      <img src="./assets/Cohete.webp" alt="Misión y Visión">
+    </div>
+
+    <div class="columna texto-izq">
+      <h2>Visión</h2>
+      <p>
+        Ser la institución que oferte una educación de calidad.
+reconocida por: la continua preparación y desempeño profesional de su equipo de trabajo; la utilización de las nuevas tecnologías en el 
+servicio educativo y por su relación colaborativa, sostenida en tres valores esenciales:
+      </p>
+      <span class="linea-decorativa"></span>
+    </div>
+  </div>
+</section>
+
+<!-- Valores -->
+ <section class="seccion-valores">
+  <div class="contenedor-valores">
+    <h2>VALORES</h2>
+
+    <!-- Valor 1: Justicia -->
+    <div class="valor-item">
+      <button class="valor-btn activo">
+        <span>Justicia</span>
+        <svg class="icono-flecha" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+      </button>
+      <div class="valor-contenido abierto">
+        <p>Inspirados en Zapata, promovemos la equidad y el apoyo a los más vulnerables.</p>
+      </div>
+    </div>
+
+    <!-- Valor 2: Respeto -->
+    <div class="valor-item">
+      <button class="valor-btn">
+        <span>Respeto</span>
+        <svg class="icono-flecha" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+      </button>
+      <div class="valor-contenido">
+        <p>Fomentamos el respeto mutuo, la tolerancia y el cuidado del medio ambiente y de nuestra comunidad escolar.</p>
+      </div>
+    </div>
+
+    <!-- Valor 3: Excelencia -->
+    <div class="valor-item">
+      <button class="valor-btn">
+        <span>Excelencia</span>
+        <svg class="icono-flecha" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+      </button>
+      <div class="valor-contenido">
+        <p>Buscamos la mejora continua en el aprendizaje, la disciplina y el esfuerzo diario de alumnos y maestros.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', function(){ var el = document.querySelector('a[href="../index.html"]'); if(el) el.classList.add('active'); });</script>
+  <script>
+    $(function() {
+      // $("#footer-placeholder").load("Componentes/footer.html");
+      $("#footer-placeholder").load("Componentes/footer.html");
+      $("#navbar-placeholder").load("Componentes/navbar.html");
+    });
+  </script>
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+  <!-- Solo necesitas este pequeño script al final del body -->
+<script>
+  document.querySelectorAll('.valor-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const contenido = btn.nextElementSibling;
+      const esActivo = btn.classList.contains('activo');
+
+      // Cerrar todos
+      document.querySelectorAll('.valor-btn').forEach(b => b.classList.remove('activo'));
+      document.querySelectorAll('.valor-contenido').forEach(c => c.classList.remove('abierto'));
+
+      // Abrir el clicado (si no estaba ya activo)
+      if (!esActivo) {
+        btn.classList.add('activo');
+        contenido.classList.add('abierto');
+      }
+    });
+  });
+</script>
+  <script src="./currentpage.js"></script>
+</body>
+</html>

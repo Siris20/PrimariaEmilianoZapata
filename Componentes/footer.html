@@ -1,0 +1,105 @@
+<style>
+.footer{
+ background-color: #0D2C51;
+ margin: 25px;
+ padding: 30px;
+ border-radius: 10px;
+  font-family: 'Balsamiq Sans', sans-serif;
+}
+.footer p {
+  color: white;
+  font-weight: 500;
+   font-family: 'Balsamiq Sans', sans-serif;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.der{
+  align-items: right;
+}
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.spie h3{
+  color: white;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4975EF;
+  padding-bottom: 5px;
+}
+
+/* Clase para ver animacion */
+.list{
+    padding: 0;
+}
+.list li{
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+    position: relative;
+    
+}
+
+.list li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition-duration: .5s;
+    
+}
+.list li:hover::before{
+    width: 70px;
+    color: #f18930;
+}
+.bt{
+  margin-bottom: 0%;
+}
+.copyright{
+  margin-bottom: 0;
+  font-weight: bold;
+}
+</style>
+
+<footer class="footer">
+      <div class="row row-cols-md-2">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <div class="col-sm-12 col-md-6 text-center spie">
+            <h3>Informacion de la escuela</h3>
+            <p class="bt"><strong>Direccion:</strong></p>
+            <p> Pino 50, Cruz de Zacate, 47300 Yahualica de Gonzalez Gallo, Jal.</p>
+            <p class="bt"><strong>Email:</strong> </p>
+            <p> emilianozapataprimaria@gmail.com</p>
+            <p class="bt"><strong>Horario de atencion:</strong></p>
+            <p> Lunes a Viernes, 8:00 am - 12:30 pm</p>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <div class="col-sm-12 col-md-6 text-center spie">
+            <h3>Links de navegacion</h3>
+            <div class="list">
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="../inscripciones.html">Inscripciones</a></li>
+              <li><a href="../his_mis_vis.html">Historia, Mision, Vision</a></li>
+              <li><a href="../instalaciones.html">Instalaciones</a></li>
+              <li><a href="../generaciones.html">Generaciones</a></li>
+              <li><a href="../docentes.html">Docentes</a></li>
+            </div>
+          </div>
+        </div>  
+      </div>
+      <div class="row copyright" id="footer_contacto">
+        <div class="col-12 text-center mt-3 copyright">
+          <p>&copy; 2025 Emiliano Zapata. Todos los derechos reservados.</p>
+          <!-- <img src="../assets/ninosFooterN.webp" alt="Niño 2" class="img-fluid rounded" style="max-width: 100px;"> -->
+        </div>
+      </div>
+</footer>

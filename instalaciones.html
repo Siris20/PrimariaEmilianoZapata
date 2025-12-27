@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalaciones</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./E_instalaciones.css">
+</head>
+<body>
+    <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+   
+   <section class="hero">
+    <h1><strong>Nuestras Instalaciones<strong></h1>
+    <p>"Descubre nuestros espacios de trabajo y enseñanza"</p>
+  </section>
+
+  <!-- EJEMPLO 1 – Imagen izquierda, texto derecha -->
+<section class="instalacion">
+  <div class="grid">
+    <div class="imagen" data-images='["./assets/Instalaciones/area_juegos_1.webp","./assets/Instalaciones/area_juegos_2.webp","./assets/Instalaciones/area_juegos_3.webp"]'>
+      <div class="arrow prev">‹</div>
+      <div class="arrow next">›</div>
+      <div class="dots"></div>
+    </div>
+
+    <div class="texto">
+      <h2>Nuestra área recreativa</h2>
+      <h3>Un espacio para la diversión y el aprendizaje</h3>
+      <p>Creemos que el juego es una parte esencial del desarrollo y la felicidad de los niños y para esto contamos con un amplio espacio para su diversión.</p>
+      <button class="btn-ampliar">AMPLIAR <span>✕</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- EJEMPLO 2 – Texto izquierda, imagen derecha (solo cambia la clase "reverse") -->
+<section class="instalacion">
+  <div class="grid reverse"> 
+    <div class="texto">
+      <h2>Área de baños</h2>
+      <h3>Higiene y cuidado personal</h3>
+      <p>Nuestros servicios sanitarios están diseñados pensando en la comodidad y limpieza para los estudiantes.</p>
+      <p>Promovemos el uso responsable del agua, el cuidado de las instalaciones y los hábitos de aseo personal.</p>
+      <button class="btn-ampliar">AMPLIAR <span>✕</span></button>
+    </div>
+
+    <div class="imagen" data-images='["./assets/Instalaciones/baños_1.webp","./assets/Instalaciones/baños_2.webp"]'>
+      <div class="arrow prev">‹</div>
+      <div class="arrow next">›</div>
+      <div class="dots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="instalacion">
+  <div class="grid">
+    <div class="imagen" data-images='["./assets/Instalaciones/fachada_1.webp","./assets/Instalaciones/fachada_2.webp"]'>
+      <div class="arrow prev">‹</div>
+      <div class="arrow next">›</div>
+      <div class="dots"></div>
+    </div>
+
+    <div class="texto">
+      <h2>Nuestra fachada</h2>
+      <h3>Entrada principal de nuestra escuela</h3>
+      <p>Este es el acceso principal de nuestra institución, punto de encuentro diario de estudiantes, docentes y familias.</p>
+      <button class="btn-ampliar">AMPLIAR <span>✕</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="close">×</span>
+  <img src="" alt="Ampliada">
+</div>
+
+   <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+   <script src="./J_instalaciones.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- <script >src=document.querySelector('a[href="../index.html"]').classList.add('active');</script> -->
+  <script>
+    $(function() {
+      // $("#footer-placeholder").load("Componentes/footer.html");
+      $("#footer-placeholder").load("Componentes/footer.html");
+      $("#navbar-placeholder").load("Componentes/navbar.html");
+    });
+  </script>
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+  
+ 
+</body>
+</html>

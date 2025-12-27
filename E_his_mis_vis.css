@@ -1,0 +1,262 @@
+    header {
+      border-radius: 10px;
+      margin-left:25px;
+      margin-right:25px;
+      margin-bottom:20px;
+      background: #fff9f0;               /* Amarillo bonito */
+      padding: 30px 10px 30px 10px;      
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: solid 5px #FFC107;
+    }
+
+    .titulo h1 {
+      font-family: 'Balsamiq Sans', sans-serif;
+      font-size: 48px;
+      font-weight: 900;
+      color:#0D2C51;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .contenedor-imagen {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .imagen-header {
+      width: 100%;
+      height: auto;
+      border-radius: 40px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    /* Opcional: efecto bonito al pasar el ratón */
+    .imagen-header:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+
+    /* historia */
+    .seccion-historia {
+      padding: 20px 50px;
+      background: #fff;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;       
+    }
+
+    .texto {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .texto h2 {
+      font-size: 42px;
+      font-weight: 900;
+      color: #003087;              
+      margin-bottom: 24px;
+      line-height: 1.1;
+      font-family: 'Balsamiq Sans', sans-serif;
+    }
+
+    .texto p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #333;
+      text-align: justify;
+      font-family: 'Balsamiq Sans', sans-serif;
+    }
+
+    /* Columna de imagen (derecha) */
+    .imagen {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .imagen img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 24px;          
+      
+    }
+    @media (max-width: 768px) {
+      .seccion-historia {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+      }
+      
+      .texto h2 {
+        font-size: 36px;
+      }
+      
+      .texto p {
+        text-align: center;
+      }
+    }
+    
+/* MISION Y VISION */
+.seccion-mision-vision {
+  padding: 30px 10px;
+ margin-left:25px;
+      margin-right:25px;
+      margin-bottom:20px;
+}
+
+.contenedor-tres-columnas {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;               
+}
+
+.columna {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.columna h2 {
+  font-size: 42px;
+  font-weight: 900;
+  color: #003087;
+  margin-bottom: 24px;
+  font-family: 'Balsamiq Sans', sans-serif;
+}
+
+.columna p {
+  font-size: 16px;
+  color: #0D2C51;
+  max-width: 280px;
+  margin: 0 auto;
+  font-family: 'Balsamiq Sans', sans-serif;
+}
+
+/* Línea decorativa azul solo en Misión (como en tu imagen) */
+.texto-izq .linea-decorativa {
+  display: block;
+  width: 80px;
+  height: 5px;
+  background: #0066ff;
+  margin: 20px auto 0;
+  border-radius: 3px;
+}
+
+/* Imagen del cohete */
+.imagen-centro img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 100%;
+}
+
+/* Responsive: en pantallas pequeñas se apilan */
+@media (max-width: 992px) {
+  .contenedor-tres-columnas {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .columna h2 {
+    font-size: 36px;
+  }
+  
+  .texto-izq .linea-decorativa {
+    margin: 20px auto;
+  }
+}
+    
+
+.seccion-valores {
+  padding: 100px 20px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.contenedor-valores {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contenedor-valores h2 {
+  font-size: 42px;
+  font-weight: 900;
+  color: #003087;
+  margin-bottom: 60px;
+}
+
+/* Botones / pestañas de valores */
+.valor-item {
+  margin-bottom: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.valor-btn {
+  width: 100%;
+  padding: 20px 30px;
+  background: white;
+  border: none;
+  font-size: 26px;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Colores exactos de tu imagen */
+.valor-btn:nth-child(1) { border-left: 8px solid #4285f4; }  /* Justicia - azul */
+.valor-btn:nth-child(2) { border-left: 8px solid #ff6d00; }  /* Respeto - naranja */
+.valor-btn:nth-child(3) { border-left: 8px solid #ffab00; }  /* Excelencia - amarillo */
+
+/* Flecha que gira */
+.icono-flecha {
+  width: 24px;
+  height: 24px;
+  fill: #555;
+  transition: transform 0.3s ease;
+}
+.valor-btn.activo .icono-flecha {
+  transform: rotate(180deg);
+}
+
+/* Contenido que se abre */
+.valor-contenido {
+  max-height: 0;
+  overflow: hidden;
+  background: white;
+  padding: 0 30px;
+  transition: all 0.4s ease;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.7;
+}
+.valor-contenido.abierto {
+  max-height: 200px;
+  padding: 25px 30px;
+}
+
+/* Hover bonito */
+.valor-btn:hover {
+  background: #f0f7ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor-valores h2 { font-size: 36px; }
+  .valor-btn { font-size: 22px; padding: 18px 20px; }
+}

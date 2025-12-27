@@ -1,0 +1,138 @@
+/* TÍTULO H2 CON LÍNEA RESPONSIVE */
+h2 {
+  display: block;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #0D2C51;
+  margin: 40px 0 30px;
+  padding: 0;
+  position: relative;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.sub h2 {
+      font-size:35px;
+      font-weight: 900;
+      color: #0D2C51;              
+      margin-bottom: 24px;
+      line-height: 1.1;
+      font-family: 'Balsamiq Sans', sans-serif;
+    }
+
+h2::after {
+  content: '';
+  display: block;
+  width: 80px;                    /* Línea corta y fija */
+  height: 5px;
+  background-color: #f18930;
+  margin: 12px auto 0;           /* Centrada */
+  border-radius: 3px;
+}
+
+/* SECCIÓN PROPÓSITO */
+.proposito {
+  background-image: url('./assets/Proposito.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  min-height: 400px;
+  position: relative;
+  margin: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.proposito-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.92);  /* Fondo blanco semitransparente */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+/* Texto */
+.proposito-content h3 {
+  font-size: 2.4rem;
+  margin: 0 0 1rem 0;
+  color: #0D2C51;
+  font-weight: 700;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.proposito-content p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #333;
+  font-family: 'Balsamiq Sans', sans-serif;
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .proposito {
+    height: 60vh;
+    margin: 20px;
+  }
+  .proposito-content {
+    left: 8%;
+    max-width: 380px;
+    padding: 25px;
+  }
+  .proposito-content h3 { font-size: 2.1rem; }
+  .proposito-content p { font-size: 1.1rem; }
+}
+
+/* Móviles (hasta 768px) */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8rem;
+    margin: 30px 0 20px;
+  }
+  h2::after {
+    width: 60px;
+    height: 4px;
+  }
+
+  .proposito {
+    height: 65vh;
+    min-height: 350px;
+    margin: 15px;
+    background-position: 70% center; /* Ajusta foco de imagen */
+  }
+
+  .proposito-content {
+    position: static;
+    transform: none;
+    max-width: none;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 25px 20px;
+    top: auto;
+    left: auto;
+    transform: translateY(0);
+  }
+
+  .proposito-content h3 {
+    font-size: 1.9rem;
+  }
+
+  .proposito-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .proposito-content {
+    width: 90%;
+    padding: 20px 15px;
+  }
+  .proposito-content h3 { font-size: 1.7rem; }
+}

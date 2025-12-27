@@ -1,0 +1,199 @@
+/* Hero section */
+    .hero {
+        border-radius: 10px;
+        margin-left:25px;
+        margin-right:25px;
+        margin-bottom:20px;
+        border: 15px solid #f18930;
+      background-image: url('./assets/hero_instalaciones.webp');
+      background-size: cover;          
+      background-position: center;      
+      background-repeat: no-repeat;
+      height: 80vh;                     
+      min-height: 400px;
+      padding: 100px 40px 60px 40px;    
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      font-family: 'Balsamiq Sans', sans-serif;
+    }
+
+    /* Título */
+    .hero h1 {
+      font-size: 4.5rem;
+      margin: 0 0 2rem 0;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+    }
+
+    
+    /* Responsive para móviles */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 80px 20px 40px 20px;
+        height: 70vh;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
+
+
+  
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {font-family: 'Balsamiq Sans', sans-serif; background:#f8f8f8; padding:40px 20px; }
+
+    .instalacion {
+      max-width: 1100px;
+      margin: 60px auto;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 420px;
+    }
+    .grid.reverse { grid-template-areas: "texto imagen"; }
+    .grid.reverse .texto { grid-area: texto; }
+    .grid.reverse .imagen { grid-area: imagen; }
+
+    .imagen, .texto {
+      position: relative;
+    }
+    .imagen { background: #000; }
+    .imagen img { width:100%; height:100%; object-fit:cover; display:none; }
+    .imagen img.active { display:block; }
+
+    /* Flechas del carrusel */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      cursor: pointer;
+      z-index: 10;
+      user-select: none;
+    }
+    .arrow.prev { left: 20px; }
+    .arrow.next { right: 20px; }
+
+    /* Dots inferiores */
+    .dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+    .dot {
+      width: 10px; height: 10px;
+      background: rgba(255,255,255,0.5);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .dot.active { background: white; }
+
+    /* Texto */
+    .texto {
+      padding: 60px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: 'Balsamiq Sans', sans-serif;
+    }
+    .texto h2 { font-size: 2.2rem; margin-bottom: 12px; color:#222; }
+    .texto h3 { font-size: 1.3rem; color:#e67e22; margin-bottom: 20px; font-weight:600; }
+    .texto p  { line-height: 1.7; color:#444; margin-bottom: 30px; }
+    .btn-ampliar {
+      align-self: flex-start;
+      background: #f39c12;
+      color: white;
+      padding: 12px 32px;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s;
+    }
+    .btn-ampliar:hover { background:#e67e22; transform:scale(1.05); }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999; /* elevado para quedar por encima de la navbar (z-index:1030) */
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90vh;
+      border: 8px solid white;
+      border-radius: 8px;
+    }
+    .close {
+      position: absolute;
+      top: 30px; right: 40px;
+      color: white;
+      font-size: 50px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+      .texto { padding: 40px 30px; text-align:center; }
+      .btn-ampliar { margin: 0 auto; }
+    }
+
+    /* En móviles: siempre imagen arriba, texto abajo (ignora el reverse) */
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr !important;        /* una sola columna */
+    grid-template-rows: auto auto !important;     /* dos filas */
+    grid-template-areas: 
+      "imagen"
+      "texto" !important;
+  }
+
+  /* Fuerza que imagen y texto ocupen su área correcta sin importar el orden original */
+  .imagen { grid-area: imagen !important; }
+  .texto  { grid-area: texto !important; }
+
+  /* Si quieres que en móvil el texto quede centrado (opcional pero queda lindo) */
+  .texto {
+    text-align: center;
+  }
+  .btn-ampliar {
+    margin: 0 auto;
+  }
+}

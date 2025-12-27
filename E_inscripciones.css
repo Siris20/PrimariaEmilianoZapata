@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Balsamiq Sans', sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.inscripcion-progreso {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nina {
+  width: 350px;
+  height: auto;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  gap: 20px;
+}
+.titulo h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.2rem;
+  color: #f18930;
+  margin-bottom: 8px;
+}
+
+.titulo p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.formato {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #f18930;
+}
+
+.icon-pdf {
+  background: #f18930;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+}
+
+/* Pasos */
+.pasos-container {
+  position: relative;
+}
+
+.paso {
+  display: flex;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.paso::before {
+  content: '';
+  position: absolute;
+  top: 65px;
+  left: 23px;
+  width: 2px;
+  height: calc(100% - 50px);
+  background: #ee9649;
+  z-index: 0;
+}
+
+.paso:last-child::before {
+  display: none;
+}
+
+.circulo {
+  width: 50px;
+  height: 50px;
+  background: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  z-index: 1;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.circulo.activo {
+  background: #f18930;
+  box-shadow: 0 0 0 6px rgba(241, 137, 48, 0.3);
+}
+
+.checkmark {
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.circulo.activo .checkmark {
+  opacity: 1;
+}
+
+.contenido {
+  flex: 1;
+  background: #fff9f0;
+  padding: 18px;
+  border-radius: 15px;
+  border-left: 4px solid #f18930;
+}
+
+.contenido h3 {
+  font-family: 'Fredoka', sans-serif;
+  color: #0D2C51;
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+}
+
+.contenido p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.btn-hecho, .btn-listo {
+  background: #f18930;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.btn-hecho:hover, .btn-listo:hover {
+  background: #e07a20;
+  transform: scale(1.05);
+}
+
+/* Progreso total */
+.progreso-total {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.barra {
+  width: 100%;
+  height: 12px;
+  background: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f18930, #ff6b3c);
+  width: 0%;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+.progreso-total p {
+  font-weight: bold;
+  color: #0D2C51;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .inscripcion-progreso {
+    padding: 20px;
+    margin: 20px;
+  }
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nina { width: 230px; }
+  .titulo h1 { font-size: 1.8rem; }
+  .paso::before { left: 23px; }
+  .circulo { width: 40px; height: 40px; margin-right: 15px; }
+  .checkmark { font-size: 1.1rem; }
+  .contenido { padding: 15px; }
+}
+
+.formato {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #d32f2f;
+  color: white !important;
+  padding: 14px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+  margin: 10px 0;
+}
+
+.formato:hover {
+  background: #b71c1c;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4);
+}
+
+.icon-pdf {
+  background: rgba(255,255,255,0.2);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./E_todos.css">
+  <link rel="stylesheet" href="./E_index.css">
+   <link rel="stylesheet" href="./E_proposito.css">
+
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Contenido principal -->
+   <section class="hero">
+    <h1>Escuela Primaria <BR> <strong>Emiliano Zapata<strong></h1>
+    <p>"Educacion de calidad para el futuro de tus hijos"</p>
+    <a href="./inscripciones.html" class="btn">INSCRIPCIONES</a>
+  </section>
+
+   <div class="sub"><h2>ACERCA DE ESTA PAGINA</h2></div>
+  <section class="proposito">
+  <div class="proposito-content">
+    <h3>Proposito</h3>
+    <p>Nuestro propósito es brindar un lugar amigable y accesible donde padres, alumnos y docentes puedan encontrar todo lo necesario sobre nuestra institución.</p>
+  </section>
+
+ <div class="sub"> <h2>INFORMACION DISPONIBLE</h2></div>
+  <section class="tarjetas">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+
+        <!-- Tarjeta 1 -->
+        <div class="col">
+          <div class="tarjeta">
+            <div class="icono">
+              <img src="https://img.icons8.com/ios-filled/100/ffffff/form.png" alt="Inscripción">
+            </div>
+            <h3>Inscripción</h3>
+            <p>Consulta el calendario oficial de la SEP, requisitos (acta, CURP, domicilio) y accede a nuestra informacion de contacto.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="col">
+          <div class="tarjeta">
+            <div class="icono">
+              <img src="https://img.icons8.com/ios-filled/100/ffffff/map-marker.png" alt="Ubicación">
+            </div>
+            <h3>Ubicación</h3>
+            <p>Encuentra nuestra dirección (Pino #50, Cruz de Zacate) desde nuestro mapa interactivo.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="col">
+          <div class="tarjeta">
+            <div class="icono">
+              <img src="https://img.icons8.com/ios-filled/100/ffffff/teacher.png" alt="Docentes">
+            </div>
+            <h3>Docentes</h3>
+            <p>Conoce perfiles breves de nuestro personal y el enfoque pedagógico de nuestro todo nuestro equipo.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="col">
+          <div class="tarjeta">
+            <div class="icono">
+              <img src="https://img.icons8.com/ios-filled/100/ffffff/school.png" alt="Instalaciones">
+            </div>
+            <h3>Instalaciones</h3>
+            <p>Descubre nuestras áreas recreativas, espacios de trabajo y áreas de servicios sanitarios .</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 5 -->
+        <div class="col">
+          <div class="tarjeta">
+            <div class="icono">
+              <img src="https://img.icons8.com/ios-filled/100/ffffff/megaphone.png" alt="Avisos">
+            </div>
+            <h3>Avisos Relevantes</h3>
+            <p>Mantente al día con fechas, horarios y detalles de eventos y reuniones con nuestro carousel de novedades y avisos importantes.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-ubicacion">
+    <div class="contenedor-ubicacion"> 
+    <h2>UBICACIÓN</h2> 
+      <div class="mapa-contenedor">
+        <!-- Opción 1: Google Maps embed (más bonito y siempre funciona) -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d930.0595941986531!2d-102.88265077542131!3d21.18268740209963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428fd1928e07aa7%3A0x40933b88da8e3609!2sEscuela%20primaria%20Emiliano%20Zapata!5e0!3m2!1ses-419!2smx!4v1763601856315!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', function(){ var el = document.querySelector('a[href="../index.html"]'); if(el) el.classList.add('active'); });</script>
+  <script>
+    $(function() {
+      // $("#footer-placeholder").load("Componentes/footer.html");
+      $("#footer-placeholder").load("Componentes/footer.html");
+      $("#navbar-placeholder").load("Componentes/navbar.html");
+    });
+  </script>
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+  <script src="./currentpage.js"></script>
+</body>
+</html>
+

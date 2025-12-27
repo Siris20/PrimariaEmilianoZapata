@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./E_inscripciones.css">
+    <link rel="stylesheet" href="./todos.css">
+</head>
+<body>
+     <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+  
+  <section class="inscripcion-progreso">
+    <div class="header">
+      <img src="./assets/nina_inscripciones.webp" alt="Niña con libros" class="nina">
+      <div class="titulo">
+        <h1>"INSCRIPCIONES 2025-2026"</h1>
+        <p>¡Únete a nuestra comunidad educativa!</p>
+        <a href="./assets/Ficha médica para EF.docx" 
+   class="formato" 
+   download>
+  <span>FORMATOS EDUCACIÓN FÍSICA</span>
+  <i class="icon-pdf">WORD</i>
+</a>
+      </div>
+    </div>
+
+    <div class="pasos-container">
+      <div class="paso" data-id="1">
+        <div class="circulo activo">
+          <i class="checkmark"></i>
+        </div>
+        <div class="contenido">
+          <h3>Formato Educacion Fisica</h3>
+          <p>Formato de Educación Física (descargable en el botón de arriba)</p>
+          <button class="btn-hecho">LISTO ?</button>
+        </div>
+      </div>
+
+      <div class="paso" data-id="2">
+        <div class="circulo">
+          <i class="checkmark"></i>
+        </div>
+        <div class="contenido">
+          <h3>1 Copia / Acta de nacimiento:</h3>
+          <p>Acta de nacimiento reciente del alumno.</p>
+          <button class="btn-listo">LISTO ?</button>
+        </div>
+      </div>
+
+      <div class="paso" data-id="3">
+        <div class="circulo">
+          <i class="checkmark"></i>
+        </div>
+        <div class="contenido">
+          <h3>1 Copia / Comprobante de domicilio:</h3>
+          <p>Recibo reciente (luz, agua, predial, no mayor a 3 meses).</p>
+          <button class="btn-listo">LISTO ?</button>
+        </div>
+      </div>
+
+      <div class="paso" data-id="4">
+        <div class="circulo">
+          <i class="checkmark"></i>
+        </div>
+        <div class="contenido">
+          <h3>1 Copia / Boleta del ciclo anterior:</h3>
+          <p>Boleta de calificaciones del último grado cursado.</p>
+          <button class="btn-listo">LISTO ?</button>
+        </div>
+      </div>
+
+      <div class="paso" data-id="5">
+        <div class="circulo">
+          <i class="checkmark"></i>
+        </div>
+        <div class="contenido">
+          <h3>1 Copia / CURP del alumno:</h3>
+          <p>CURP del niño o niña (se puede descargar gratis en curp.gob.mx)</p>
+          <button class="btn-listo">LISTO ?</button>
+        </div>
+      </div>
+
+      <div class="paso" data-id="6">
+        <div class="circulo">
+          <i class="checkmark"></i>
+        </div>
+        <div class="contenido">
+          <h3>1 Copia / CURP de padre o madre:</h3>
+          <p>CURP impresa del padre, madre o tutor (se puede descargar gratis en curp.gob.mx)</p>
+          <button class="btn-listo">LISTO ?</button>
+        </div>
+      </div>
+
+      <div class="paso" data-id="7">
+        <div class="circulo">
+          <i class="checkmark"></i>
+        </div>
+        <div class="contenido">
+          <h3>1 Copia / INE de padre o madre:</h3>
+          <p>Credencial para votar vigente del padre, madre o tutor (por ambos lados)</p>
+          <button class="btn-listo">LISTO ?</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="progreso-total">
+      <div class="barra">
+        <div class="fill" style="width: 0%;"></div>
+      </div>
+      <p><span id="completados">0</span> de 7 pasos completados</p>
+    </div>
+  </section>
+
+  <script src="./J_inscripciones.js"></script>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script >src=document.querySelector('a[href="../inscripciones.html"]').classList.add('active');</script> -->
+  <script>
+  $(function() {
+    $("#navbar-placeholder").load("Componentes/navbar.html", function() {
+      // Reinicializar dropdowns
+      document.querySelectorAll('.dropdown-toggle').forEach(function(dropdownToggle) {
+        new bootstrap.Dropdown(dropdownToggle);
+      });
+    });
+
+    $("#footer-placeholder").load("Componentes/footer.html");
+  });
+</script>
+<script src="./currentpage.js"></script>
+</body>
+</html>
+
+!
