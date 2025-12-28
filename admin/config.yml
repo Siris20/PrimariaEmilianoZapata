@@ -1,30 +1,28 @@
 backend:
   name: github
-  branch: master   # o "master" si tu rama principal se llama así
-  repo: Siriso20/PrimariaEmilianoZapata   # Ejemplo: ITSN/PrimariaEmilianoZapata
+  repo: Siris20/PrimariaEmilianoZapata   # Corregido: Siris20 (con "r")
+  branch: master                         # Bien, si tu rama principal es master
+  base_url: https://sveltia-cms-auth.22050041.workers.dev
+  auth_endpoint: callback
 
-media_folder: "assets"          # Carpeta donde se subirán las imágenes
-public_folder: "/assets"        # Ruta pública para acceder a las imágenes
+media_folder: "assets"          # Carpeta donde se suben las imágenes
+public_folder: "/assets"        # Ruta pública de las imágenes
 
 collections:
   - name: "avisos"
     label: "Avisos y Noticias del Carrousel"
     label_singular: "Aviso o Noticia"
-    folder: "data"                 # Carpeta donde está noticias.json
-    create: true                  # Permite crear nuevos
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    extension: "json"
-    format: "json"
-    identifier_field: "titulo"
-    summary: "{{titulo}} — {{descripcion | truncate 50}}"
-
-    # Este es el formato de un solo archivo JSON con lista
-    fields:
-      - label: "Avisos y Noticias"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.titulo}}"
+    files:                                 # ← Cambiado de "folder" a "files"
+      - label: "Noticias del Carrousel"
+        name: "noticias"
+        file: "data/noticias.json"         # ← El único archivo que se edita
         fields:
-          - { label: "Título", name: "titulo", widget: "string", required: true }
-          - { label: "Descripción", name: "descripcion", widget: "text", required: true }
-          - { label: "Imagen de fondo", name: "imagen", widget: "image", required: true }
+          - label: "Avisos y Noticias"
+            name: "items"
+            widget: "list"
+            collapsed: false
+            summary: "{{fields.titulo}}"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string", required: true }
+              - { label: "Descripción", name: "descripcion", widget: "text", required: true }
+              - { label: "Imagen de fondo", name: "imagen", widget: "image", required: true, allow_multiple: false }
