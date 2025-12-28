@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
-  branch: master   # o la rama que uses (main o master)
+  name: github
+  branch: master   # o "master" si tu rama principal se llama así
+  repo: Siriso20/PrimariaEmilianoZapata   # Ejemplo: ITSN/PrimariaEmilianoZapata
 
 media_folder: "assets"          # Carpeta donde se subirán las imágenes
 public_folder: "/assets"        # Ruta pública para acceder a las imágenes
