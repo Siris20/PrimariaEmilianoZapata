@@ -1,21 +1,21 @@
 backend:
   name: github
-  repo: Siris20/PrimariaEmilianoZapata   # Corregido: Siris20 (con "r")
-  branch: master                         # Bien, si tu rama principal es master
+  repo: Siris20/PrimariaEmilianoZapata
+  branch: master
   base_url: https://sveltia-cms-auth.22050041.workers.dev
   auth_endpoint: callback
 
-media_folder: "assets"          # Carpeta donde se suben las imágenes
-public_folder: "/assets"        # Ruta pública de las imágenes
+media_folder: "assets"
+public_folder: "/assets"
 
 collections:
   - name: "avisos"
     label: "Avisos y Noticias del Carrousel"
     label_singular: "Aviso o Noticia"
-    files:                                 # ← Cambiado de "folder" a "files"
+    files:
       - label: "Noticias del Carrousel"
         name: "noticias"
-        file: "data/noticias.json"         # ← El único archivo que se edita
+        file: "data/noticias.json"
         fields:
           - label: "Avisos y Noticias"
             name: "items"
@@ -25,4 +25,4 @@ collections:
             fields:
               - { label: "Título", name: "titulo", widget: "string", required: true }
               - { label: "Descripción", name: "descripcion", widget: "text", required: true }
-              - { label: "Imagen de fondo", name: "imagen", widget: "image", required: true, allow_multiple: false }
+              - { label: "Imagen de fondo", name: "imagen", widget: "image", required: true, multiple: false }
