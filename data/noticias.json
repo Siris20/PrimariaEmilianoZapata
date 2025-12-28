@@ -1,14 +1,14 @@
 {
   "items": [
     {
-      "titulo": "¡Bienvenidos al ciclo escolar 2025-2026!",
-      "descripcion": "Las clases inician el lunes 12 de enero. ¡Los esperamos con los brazos abiertos!",
-      "imagen": "/assets/ejemplo-noticia1.webp"
-    },
-    {
       "titulo": "Día de la Familia",
       "descripcion": "Ven a celebrar con nosotros el sábado 22 de febrero. Habrá actividades para todos.",
-      "imagen": "/assets/ejemplo-noticia2.jpg"
+      "imagen": "/assets/Instalaciones/baños_1.webp"
+    },
+    {
+      "titulo": "¡Bienvenidos al ciclo escolar 2025-2026!",
+      "descripcion": "Las clases inician el lunes 12 de enero. ¡Los esperamos con los brazos abiertos!",
+      "imagen": "/assets/144644013_10148870.jpg"
     }
   ]
 }
